@@ -2,7 +2,7 @@ package Hibernate;
 
 import Hibernate.util.FactoryConfiguration;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
+import org.hibernate.Transaction;;
 
 public class AppInitializer {
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class AppInitializer {
         order.getItemList().add(item);
         order.getItemList().add(item1);*/
 
-        Session session = (Session) FactoryConfiguration.getInstance().getSession();
+        Session session = FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         //session.save(customer);

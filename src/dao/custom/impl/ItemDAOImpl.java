@@ -1,6 +1,5 @@
 package dao.custom.impl;
 
-import Hibernate.entity.Customer;
 import Hibernate.entity.Item;
 import Hibernate.entity.Order;
 import dao.CrudUtil;
@@ -9,9 +8,8 @@ import dao.custom.ItemDAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
-public class ItemDAOImpl implements ItemDAO {
+public abstract class ItemDAOImpl implements ItemDAO {
     @Override
     public boolean add(Item dto) throws SQLException, ClassNotFoundException {
         return CrudUtil.executeUpdate("INSERT INTO Item (code, description, packSize,  unitPrice, qtyOnHand) VALUES (?,?,?,?,?)", dto.getItemCode(), dto.getDescription(), dto.getPackSize(), dto.getUnitPrice(), dto.getQtyOnHand());
@@ -35,7 +33,7 @@ public class ItemDAOImpl implements ItemDAO {
     }
 
     @Override
-    public List<Customer> getAll() throws SQLException, ClassNotFoundException {
+    public ArrayList<Item> getAll() throws SQLException, ClassNotFoundException {
         ArrayList<Item> allItems = new ArrayList<>();
         ResultSet rst = CrudUtil.executeQuery("SELECT * FROM Item");
         while (rst.next()) {

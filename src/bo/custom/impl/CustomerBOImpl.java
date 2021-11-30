@@ -32,7 +32,7 @@ public class CustomerBOImpl implements CustomerBO {
 
     @Override
     public String generateNewID() throws SQLException, ClassNotFoundException {
-        return customerDAO.generateNewID();
+        return (String) customerDAO.generateNewID();
     }
 
     private final CustomerDAO customerDAO = (CustomerDAO) DAOFactory.getDAOFactory().getDAO(DAOFactory.DAOTypes.CUSTOMER);

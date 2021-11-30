@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
-public class OrderDAOImpl implements OrderDAO {
+public abstract class OrderDAOImpl implements OrderDAO {
 
     @Override
     public boolean add(Order dto) throws SQLException, ClassNotFoundException {

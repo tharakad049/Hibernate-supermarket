@@ -9,9 +9,9 @@ import dao.custom.OrderDetailsDAO;
 import java.sql.SQLException;
 import java.util.List;
 
-public class OrderDetailsDAOImpl implements OrderDetailsDAO {
+public abstract class OrderDetailsDAOImpl implements OrderDetailsDAO {
 
-    @Override
+    //@Override
     public boolean add(OrderDetails dto) throws SQLException, ClassNotFoundException {
         return CrudUtil.executeUpdate("INSERT INTO `OrderDetails` (OrderId, Code, UnitPrice, Qty) VALUES (?,?,?,?)", dto.getOid(),dto.getItemCode(), dto.getUnitPrice(), dto.getQty());
     }

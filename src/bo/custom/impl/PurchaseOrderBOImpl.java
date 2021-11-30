@@ -70,7 +70,7 @@ public class PurchaseOrderBOImpl implements PurchaseOrderBO {
 
     @Override
     public String generateNewOrderId() throws SQLException, ClassNotFoundException {
-        return orderDAO.generateNewOrderId();
+        return (String) orderDAO.generateNewOrderId();
     }
 
     @Override

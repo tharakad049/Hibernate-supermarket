@@ -17,7 +17,7 @@ public class ItemBOImpl implements ItemBO {
     @Override
     public ArrayList<ItemDTO> getAllItems() throws SQLException, ClassNotFoundException {
         ArrayList<ItemDTO> allItems = new ArrayList<>();
-        AbstractList<Item> all = itemDAO.getAll();
+        AbstractList<Item> all = (AbstractList<Item>) itemDAO.getAll();
         for (Item i : all) {
             allItems.add(new ItemDTO(i.getItemCode(), i.getDescription(), i.getPackSize(), i.getUnitPrice(), i.getQtyOnHand()));
         }
@@ -47,6 +47,6 @@ public class ItemBOImpl implements ItemBO {
 
     @Override
     public String generateNewID() throws SQLException, ClassNotFoundException {
-        return itemDAO.generateNewID();
+        return (String) itemDAO.generateNewID();
     }
 }
