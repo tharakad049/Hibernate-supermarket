@@ -3,11 +3,12 @@ package Hibernate.entity;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Item {
+public class Item extends Customer {
     @Id
     private String itemCode;
     private String description;
@@ -18,7 +19,7 @@ public class Item {
     @ManyToMany(mappedBy = "itemList")
     private List<Order> orderList = new ArrayList<>();
 
-    public Item() {
+    public Item(String code, String description, String packSize, int qtyOnHand, BigDecimal unitPrice) {
     }
 
     public Item(String itemCode, String description, String packSize, double unitPrice, int qtyOnHand, List<Order> orderList) {
@@ -28,6 +29,9 @@ public class Item {
         this.setUnitPrice(unitPrice);
         this.setQtyOnHand(qtyOnHand);
         this.setOrderList(orderList);
+    }
+
+    public Item() {
     }
 
     public String getItemCode() {

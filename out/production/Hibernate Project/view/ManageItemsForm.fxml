@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageItemsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+         <fill>
+            <LinearGradient endX="0.04807692307692308" endY="0.7115384615384616">
+               <stops>
+                  <Stop color="#1598d6" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Rectangle>
+      <ImageView id="imgHome" fitHeight="53.0" fitWidth="55.0" layoutX="27.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/database.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="109.0" layoutY="20.0" prefHeight="45.0" prefWidth="231.0" text="Manage Items" textFill="#6b0000">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnAddNewCustomer" fx:id="btnAddNewItem" buttonType="RAISED" layoutX="733.0" layoutY="21.0" onAction="#addNewItemOnAction" prefHeight="44.0" prefWidth="210.0" style="-fx-background-color: #70a1ff;" text="Add New Item" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <JFXButton id="btnDelete" fx:id="btnDelete" buttonType="RAISED" layoutX="613.0" layoutY="306.0" onAction="#deleteOnAction" prefHeight="44.0" prefWidth="157.0" style="-fx-background-color: #e1b12c;" text="Delete">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <TableView fx:id="tblItems" layoutX="22.0" layoutY="363.0" prefHeight="285.0" prefWidth="926.0" stylesheets="@../assests/styles/Style.css">
+        <columns>
+          <TableColumn prefWidth="104.0" text="Code" />
+          <TableColumn prefWidth="285.0" text="Description" />
+            <TableColumn prefWidth="171.0" text="Pack Size" />
+            <TableColumn prefWidth="155.0" text="Unit Price" />
+            <TableColumn prefWidth="210.0" text="Qty On Hand" />
+        </columns>
+      </TableView>
+      <Pane layoutX="27.0" layoutY="93.0" prefHeight="200.0" prefWidth="916.0" style="-fx-background-color: #c7ecee;">
+         <children>
+            <JFXTextField fx:id="txtCode" focusColor="#10b256" labelFloat="true" layoutX="21.0" layoutY="26.0" prefHeight="31.0" prefWidth="210.0" promptText="Item Code :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtDescription" focusColor="#10b256" labelFloat="true" layoutX="294.0" layoutY="26.0" prefHeight="31.0" prefWidth="595.0" promptText="Item Description :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPackSize" focusColor="#10b256" labelFloat="true" layoutX="21.0" layoutY="85.0" prefHeight="31.0" prefWidth="210.0" promptText="Pack Size :- ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField fx:id="txtUnitPrice" focusColor="#10b256" labelFloat="true" layoutX="294.0" layoutY="85.0" prefHeight="31.0" prefWidth="595.0" promptText="Unit Price :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQtyOnHand" focusColor="#10b256" labelFloat="true" layoutX="21.0" layoutY="146.0" prefHeight="37.0" prefWidth="577.0" promptText="Qty. On Hand :- ">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <JFXButton id="btnSave" fx:id="btnSave" buttonType="RAISED" layoutX="689.0" layoutY="143.0" onAction="#saveOnAction" prefHeight="44.0" prefWidth="134.0" style="-fx-background-color: #009432;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Separator layoutX="27.0" layoutY="328.0" prefHeight="6.0" prefWidth="563.0" style="-fx-background-color: red;" />
+      <JFXButton fx:id="btnPrintReport" buttonType="RAISED" layoutX="797.0" layoutY="306.0" onAction="#printReportOnAction" prefHeight="44.0" prefWidth="146.0" style="-fx-background-color: #c0392b;" text="Print Report">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="326.0" layoutY="39.0" prefHeight="6.0" prefWidth="391.0" style="-fx-background-color: gray;" />
+
+   </children>
+</AnchorPane>

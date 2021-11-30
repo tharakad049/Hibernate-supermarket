@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="reportPane" prefHeight="685.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SystemReportsFormController">
+   <children>
+      <ImageView fitHeight="71.0" fitWidth="72.0" layoutX="30.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/report.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="131.0" layoutY="36.0" text="System Reports" textFill="#5e0707">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="404.0" fitWidth="425.0" layoutX="355.0" layoutY="145.0" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="178.0" fitWidth="208.0" layoutX="464.0" layoutY="36.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="178.0" fitWidth="200.0" layoutX="672.0" layoutY="140.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="178.0" fitWidth="208.0" layoutX="668.0" layoutY="371.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="178.0" fitWidth="208.0" layoutX="467.0" layoutY="482.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="178.0" fitWidth="208.0" layoutX="259.0" layoutY="371.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="178.0" fitWidth="208.0" layoutX="259.0" layoutY="140.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/1.990.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgWellcome" fitHeight="112.0" fitWidth="114.0" layoutX="514.0" layoutY="62.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/boy.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgItems" fitHeight="98.0" fitWidth="104.0" layoutX="720.0" layoutY="182.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/tasklist-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgOrderDetails" fitHeight="104.0" fitWidth="104.0" layoutX="720.0" layoutY="402.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/Order.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="125.0" fitWidth="114.0" layoutX="514.0" layoutY="509.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/report.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgOrder" fitHeight="98.0" fitWidth="104.0" layoutX="306.0" layoutY="408.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/cart.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="imgCustomer" fitHeight="107.0" fitWidth="104.0" layoutX="314.0" layoutY="179.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/images/customer-64.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="lblMenu" layoutX="27.0" layoutY="146.0" prefHeight="45.0" prefWidth="208.0" text="REPORT" textFill="#940808" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu1" layoutX="23.0" layoutY="238.0" prefHeight="45.0" prefWidth="218.0" text="REPORT" textFill="#9a0404" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Circle fill="#c9c9c9" layoutX="568.0" layoutY="353.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="lblMenu3" layoutX="25.0" layoutY="424.0" prefHeight="36.0" prefWidth="200.0" text="REPORT" textFill="#9e0404" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="586.0" prefHeight="36.0" prefWidth="256.0" text="REPORT" textFill="#a80f0f" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu2" layoutX="21.0" layoutY="331.0" prefHeight="45.0" prefWidth="208.0" text="REPORT" textFill="#a40b0b" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMenu4" layoutX="28.0" layoutY="506.0" prefHeight="36.0" prefWidth="256.0" text="REPORT" textFill="#ae0b0b" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="532.0" layoutY="301.0" text="ABC" textFill="#00680b">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="347.0" text="Supermarket" textFill="#00680b">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -43,7 +43,7 @@ public class AppInitializer {
         order.getItemList().add(item);
         order.getItemList().add(item1);*/
 
-        Session session = FactoryConfiguration.getInstance().getSession();
+        Session session = (Session) FactoryConfiguration.getInstance().getSession();
         Transaction transaction = session.beginTransaction();
 
         //session.save(customer);

@@ -4,11 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity(name = "order")
-public class Order {
+public class Order extends Item {
 @Id
     private String oid;
     private String date;
@@ -17,7 +19,7 @@ public class Order {
     @ManyToMany
     private List<Item> itemList = new ArrayList<>();
 
-    public Order() {
+    public Order(String oId, LocalDate date, String customerID) {
     }
 
     public Order(String oid, String date, String customerID, List<Item> itemList) {
@@ -26,6 +28,13 @@ public class Order {
         this.setCustomerID(customerID);
         this.setItemList(itemList);
     }
+
+    public Order(String id, String title, String name, String address, String city, String province, String postalCode) {
+    }
+
+    public Order(String code, String description, String packSize, int qtyOnHand, BigDecimal unitPrice) {
+    }
+
     @Id
     @GeneratedValue
     public String getOid() {

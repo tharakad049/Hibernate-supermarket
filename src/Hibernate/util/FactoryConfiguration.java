@@ -1,6 +1,6 @@
 package Hibernate.util;
 
-import org.hibernate.Session;
+import net.sf.jasperreports.engine.JRDataSource;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Order;
@@ -21,7 +21,7 @@ public class FactoryConfiguration {
                 factoryConfiguration = new FactoryConfiguration()
                 : factoryConfiguration;
     }
-    public Session getSession(){
-        return sessionFactory.openSession();
+    public JRDataSource getSession(){
+        return (JRDataSource) sessionFactory.openSession();
     }
 }
